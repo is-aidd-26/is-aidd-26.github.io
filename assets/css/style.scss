@@ -1,0 +1,338 @@
+---
+---
+
+/* AI-Driven Development 2026 — базовая вёрстка (без фреймворков) */
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f6f7f9;
+  --fg: #1f2430;
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-soft: #eef2ff;
+  --border: #e5e7eb;
+  --code-bg: #f3f4f6;
+  --mark-bg: #fff7ed;
+  --max-width: 56rem;
+  --radius: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--fg);
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Шапка */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  padding-top: 0.85rem;
+  padding-bottom: 0.85rem;
+}
+
+.site-title {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--fg);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.site-title:hover {
+  color: var(--accent);
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+}
+
+.nav-link {
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--radius);
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.nav-link:hover {
+  color: var(--fg);
+  background: var(--bg-soft);
+}
+
+.nav-link.active {
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+/* Контент */
+
+main.container {
+  flex: 1;
+  padding-top: 2.25rem;
+  padding-bottom: 3rem;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.3;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.45rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+h3 {
+  font-size: 1.15rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin: 0 0 1rem;
+}
+
+li {
+  margin-bottom: 0.35rem;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+  padding: 0.25rem 1.1rem;
+  border-left: 4px solid var(--accent);
+  background: var(--accent-soft);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  color: var(--fg);
+}
+
+code {
+  font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 0.875em;
+  background: var(--code-bg);
+  padding: 0.15em 0.4em;
+  border-radius: 6px;
+}
+
+pre {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 1rem;
+  font-size: 0.95rem;
+}
+
+th, td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+}
+
+th {
+  background: var(--bg-soft);
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* Главная: карточки разделов */
+
+.section-cards {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.section-cards .card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--fg);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.section-cards .card:hover {
+  text-decoration: none;
+  border-color: var(--accent);
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.08);
+}
+
+.section-cards .card-title {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.section-cards .card-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+/* Списки лекций и лабораторных */
+
+.content-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.content-list li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.7rem 0.25rem;
+  border-bottom: 1px solid var(--border);
+  margin: 0;
+}
+
+.content-list li:last-child {
+  border-bottom: none;
+}
+
+.content-list .num {
+  flex-shrink: 0;
+  min-width: 2rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.content-list .desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.badge {
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-soft);
+  border-radius: 999px;
+  padding: 0.1rem 0.55rem;
+}
+
+/* Лабораторная: шапка страницы */
+
+.lab-header {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+/* Футер */
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 1.25rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.site-footer a {
+  color: var(--muted);
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+}
+
+/* Формулы MathJax не должны ломать верстку */
+
+mjx-container {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+/* Адаптивность */
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .header-inner {
+    justify-content: center;
+    text-align: center;
+  }
+}

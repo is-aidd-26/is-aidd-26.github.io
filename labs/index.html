@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /labs/
+title: Лабораторные работы
+---
+
+# Лабораторные работы
+
+{% assign labs = site.labs | sort: "num" %}
+<ul class="content-list">
+  {% for lab in labs %}
+  <li>
+    <span class="num">{{ lab.num }}</span>
+    <a href="{{ lab.url | relative_url }}">{{ lab.title }}</a>
+    {% if lab.summary %}<span class="desc">{{ lab.summary }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>

@@ -1,0 +1,10 @@
+- title: Главная
+  url: /
+- title: Syllabus
+  url: /syllabus/
+- title: Лекции
+  url: /lectures/
+- title: Лабораторные
+  url: /labs/
+- title: Do & Don't
+  url: /do-donts/

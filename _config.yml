@@ -1,0 +1,38 @@
+# Site settings
+title: AI-Driven Development 2026
+description: Страница курса — программа, лекции и лабораторные работы
+lang: ru
+url: "https://is-aidd-26.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  # Отключаем встроенный math kramdown: формулы $...$ / $$...$$
+  # обрабатывает MathJax 3 (см. _includes/mathjax.html)
+  math_engine: ~
+
+# Collections
+collections:
+  labs:
+    output: true
+    permalink: /labs/:slug/
+
+defaults:
+  - scope:
+      path: ""
+      type: labs
+    values:
+      layout: default
+  - scope:
+      path: ""
+    values:
+      layout: default
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
+  - .bundle/

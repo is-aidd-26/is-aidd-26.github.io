@@ -1,0 +1,24 @@
+- number: 1
+  title: Основы ООП
+  file: 1-oop-basics-presentation.pdf
+- number: 2
+  title: SOLID
+  file: 2-solid.pdf
+- number: 3
+  title: GRASP
+  file: 3-grasp.pdf
+- number: 4
+  title: Порождающие паттерны
+  file: 4-creational-patterns.pdf
+- number: 5
+  title: Структурные паттерны
+  file: 5-structural-patterns.pdf
+- number: 6
+  title: Поведенческие паттерны (1)
+  file: 6-behavioural-patterns-1-presentation.pdf
+- number: 7
+  title: Поведенческие паттерны (2)
+  file: 7-behavioural-patterns-2-presentation.pdf
+- number: 8
+  title: Многослойные архитектуры
+  file: 8-layered-architectures.pdf

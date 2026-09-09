@@ -1,0 +1,19 @@
+---
+layout: default
+permalink: /lectures/
+title: Лекции
+---
+
+# Лекции
+
+Материалы лекций в формате PDF.
+
+<ul class="content-list">
+  {% for lecture in site.data.lectures %}
+  <li>
+    <span class="num">{{ lecture.number }}</span>
+    <a href="{{ '/assets/lectures/' | append: lecture.file | relative_url }}">{{ lecture.title }}</a>
+    <span class="badge">PDF</span>
+  </li>
+  {% endfor %}
+</ul>
