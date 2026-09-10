@@ -1,31 +1,7 @@
 # is-aidd-26.github.io
 
-Страница курса **AI-Driven Development 2026**: программа, лекции, лабораторные работы.
+Страница курса **Технологии ИИ в разработке ПО**: программа, лекции, лабораторные работы.
 Сайт собран на [Jekyll](https://jekyllrb.com) и публикуется через [GitHub Pages](https://pages.github.com).
-
-## Структура проекта
-
-```
-.
-├── _config.yml            # настройки сайта (название, collections, markdown)
-├── Gemfile                # зависимости Ruby (jekyll)
-├── index.md               # главная страница
-├── 404.md                 # страница 404
-├── syllabus.md            # правила курса
-├── do-donts.md            # Do & Don't
-├── _data/
-│   ├── nav.yml            # пункты навигации в шапке
-│   └── lectures.yml       # список лекций (данные отдельно от вёрстки)
-├── _labs/                 # коллекция лабораторных работ
-│   └── lab-1.md … lab-5.md
-├── labs/index.html        # страница со списком лабораторных
-├── lectures/index.html    # страница со списком лекций
-├── _layouts/default.html  # базовый шаблон (шапка, контент, футер, MathJax)
-├── _includes/             # фрагменты шаблонов (header, footer, mathjax)
-└── assets/
-    ├── css/style.scss     # стили (компилируются в /assets/css/style.css)
-    └── lectures/*.pdf     # PDF-файлы лекций
-```
 
 ## Локальный запуск
 
@@ -82,8 +58,26 @@ summary: "Краткое описание для списка"
 > вне whitelist на сервере работать не будут — локально сайт собирается Jekyll 4.4.1,
 > но используйте только возможности, доступные на GitHub Pages.
 
-## Troubleshooting
+## Структура проекта
 
-- `can't find gem webrick` — Ruby 3 больше не поставляет webrick: `gem install webrick`.
-- Если Ruby-гемы установлены в `~/gems`, убедитесь, что в `~/.bashrc` есть
-  `export GEM_HOME="$HOME/gems"` и `export PATH="$HOME/gems/bin:$PATH"`.
+```
+.
+├── _config.yml            # настройки сайта (название, collections, markdown)
+├── Gemfile                # зависимости Ruby (jekyll)
+├── index.md               # главная страница
+├── 404.md                 # страница 404
+├── rules.md               # правила курса
+├── do-donts.md            # Do & Don't
+├── _data/
+│   ├── nav.yml            # пункты навигации в шапке
+│   └── lectures.yml       # список лекций (данные отдельно от вёрстки)
+├── _labs/                 # коллекция лабораторных работ
+│   └── lab-1.md … lab-5.md
+├── labs/index.html        # страница со списком лабораторных
+├── lectures/index.html    # страница со списком лекций
+├── _layouts/default.html  # базовый шаблон (шапка, контент, футер, MathJax)
+├── _includes/             # фрагменты шаблонов (header, footer, mathjax)
+└── assets/
+    ├── css/style.scss     # стили (компилируются в /assets/css/style.css)
+    └── lectures/*.pdf     # PDF-файлы лекций
+```
