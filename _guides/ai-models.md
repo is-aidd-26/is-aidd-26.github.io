@@ -11,6 +11,16 @@ summary: "ИИ-модели как сервис"
 - [OpenCode](https://opencode.ai/) — у провайдера моделей OpenCode Zen есть бесплатный план
 - [AntiGravity](https://antigravity.google/download/) — есть бесплатный план
 
+Оба варианта недоступны с российских IP.
+
+## API
+
+OpenRouter предоставляет ограниченный бесплатный доступ к некоторым ИИ-моделям по ключу:
+
+- OpenRouter не работает с российских IP
+- Ключ API можно подключить к ИИ-агенту — например, к [OpenCode](https://opencode.ai/)
+- Подробнее: [openrouter.ai/openrouter/free](https://openrouter.ai/openrouter/free)
+
 ## Чаты с ИИ-моделями
 
 Ниже перечислены сервисы, у которых есть ограниченный бесплатный доступ (часто после регистрации).
