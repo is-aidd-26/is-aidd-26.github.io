@@ -18,11 +18,19 @@ collections:
   labs:
     output: true
     permalink: /labs/:slug/
+  guides:
+    output: true
+    permalink: /guides/:slug/
 
 defaults:
   - scope:
       path: ""
       type: labs
+    values:
+      layout: default
+  - scope:
+      path: ""
+      type: guides
     values:
       layout: default
   - scope:

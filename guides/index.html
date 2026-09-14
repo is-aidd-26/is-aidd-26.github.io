@@ -1,0 +1,18 @@
+---
+layout: default
+permalink: /guides/
+title: Статьи
+---
+
+<h1>Статьи</h1>
+
+{% assign guides = site.guides | sort: "num" %}
+<ul class="content-list">
+  {% for guide in guides %}
+  <li>
+    <span class="num">{{ guide.num }}</span>
+    <a href="{{ guide.url | relative_url }}">{{ guide.title }}</a>
+    {% if guide.summary %}<span class="desc">{{ guide.summary }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
