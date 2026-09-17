@@ -1,0 +1,5 @@
+{%- assign date_format = include.date -%}
+{%- assign day = date_format | date: "%-d" -%}
+{%- assign month_index = date_format | date: "%m" -%}
+
+{{ day }} {{ site.data.ru.months[month_index] }}

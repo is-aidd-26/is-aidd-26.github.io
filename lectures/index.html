@@ -6,12 +6,10 @@ title: Лекции
 
 <h1>Лекции</h1>
 
-Материалы лекций в формате PDF будут добавляться с 17 сентября.
-
 <ul class="content-list">
   {% for lecture in site.data.lectures %}
   <li>
-    <span class="num">{{ lecture.number }}</span>
+    <span class="num">{% include ru_date.html date=lecture.date %}</span>
     <a href="{{ '/assets/lectures/' | append: lecture.file | relative_url }}">{{ lecture.title }}</a>
     <span class="badge">PDF</span>
   </li>

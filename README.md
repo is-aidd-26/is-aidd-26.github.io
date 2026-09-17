@@ -12,7 +12,9 @@
 Требуется Ruby ≥ 3.1 и Bundler (`gem install bundler`, если ещё не установлен).
 
 ```bash
-bundle install          # один раз
+# однократно
+bundle install
+
 bundle exec jekyll serve
 ```
 
