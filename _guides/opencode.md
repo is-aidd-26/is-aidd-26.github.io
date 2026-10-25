@@ -8,63 +8,11 @@ summary: "Установка OpenCode и подключение ИИ-модел�
 
 На этом курсе рекомендуем использовать OpenCode версий 1.x.
 
-## Установка
+## Установка Opencode
 
-> Другие способы установки есть на странице [opencode.ai/download](https://opencode.ai/download). Ниже описана установка через Homebrew для Ubuntu и MacOSX.
+Следуйте официальной инструкции: [opencode.ai/download](https://opencode.ai/download)
 
-### Установка Homebrew на Ubuntu 24.04+
-
-Установите зависимости Homebrew:
-
-```bash
-sudo apt-get install build-essential procps curl file git
-```
-
-Установите Homebrew:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-По завершении установщик выводит подсказку «Next steps» — выполните эти команды, чтобы Homebrew появился в `PATH`:
-
-```bash
-echo >> ~/.bashrc
-echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-```
-
-### Установка Homebrew на Mac OS X
-
-Установите Homebrew:
-
-```bash
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-```
-
-Выполните команды, чтобы Homebrew появился в `PATH`:
-
-```bash
-echo >> ~/.zprofile
-echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
-eval "$(/opt/homebrew/bin/brew shellenv)"
-```
-
-### Установка OpenCode 1.x
-
-Установите OpenCode:
-
-```bash
-brew install anomalyco/tap/opencode
-```
-
-Проверьте установку:
-
-```bash
-opencode --version
-```
-
-## Deepseek-Flash через прокси llm.atdd.ru
+## Ключи Deepseek-Flash через прокси llm.atdd.ru
 
 Прокси-сервер `llm.atdd.ru` (Bifrost с виртуальными ключами) открывает доступ к модели Deepseek-Flash:
 
@@ -79,7 +27,7 @@ opencode --version
 
 Инструкция:
 
-1. Перейдите на https://llm.atdd.ru/keys/
+1. Перейдите на [https://llm.atdd.ru/keys/](https://llm.atdd.ru/keys/)
 2. Авторизуйтесь через Github
 3. Следуйте инструкции и используйте ключ, указанный на этой странице
 
