@@ -1,0 +1,102 @@
+---
+title: "Настройка OpenCode"
+num: 2
+summary: "Установка OpenCode и подключение ИИ-моделей"
+---
+
+[OpenCode](https://opencode.ai/) — это ИИ-агент для работы с кодом, один из ведущих агентов в OpenSource.
+
+На этом курсе рекомендуем использовать OpenCode версий 1.x.
+
+## Установка
+
+> Другие способы установки есть на странице [opencode.ai/download](https://opencode.ai/download). Ниже описана установка через Homebrew для Ubuntu и MacOSX.
+
+### Установка Homebrew на Ubuntu 24.04+
+
+Установите зависимости Homebrew:
+
+```bash
+sudo apt-get install build-essential procps curl file git
+```
+
+Установите Homebrew:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+По завершении установщик выводит подсказку «Next steps» — выполните эти команды, чтобы Homebrew появился в `PATH`:
+
+```bash
+echo >> ~/.bashrc
+echo 'eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"' >> ~/.bashrc
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+```
+
+### Установка Homebrew на Mac OS X
+
+Установите Homebrew:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+Выполните команды, чтобы Homebrew появился в `PATH`:
+
+```bash
+echo >> ~/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+```
+
+### Установка OpenCode 1.x
+
+Установите OpenCode:
+
+```bash
+brew install anomalyco/tap/opencode
+```
+
+Проверьте установку:
+
+```bash
+opencode --version
+```
+
+## OpenCode Zen
+
+> OpenCode Zen недоступен с российских IP-адресов.
+
+OpenCode Zen — провайдер моделей от команды OpenCode. Модели с пометкой Free в названии бесплатны и доступны сразу после регистрации.
+
+1. Войдите через Google- или GitHub-аккаунт на [opencode.ai/auth](https://opencode.ai/auth) и скопируйте API-ключ.
+2. Перейдите в каталог проекта и запустите `opencode`.
+3. Выполните команду `/connect`, выберите **OpenCode Zen** и вставьте API-ключ.
+4. Выполните команду `/models` и выберите модель с пометкой Free.
+
+## Deepseek-Flash через прокси llm.atdd.ru
+
+Прокси-сервер `llm.atdd.ru` (Bifrost с виртуальными ключами) открывает доступ к модели Deepseek-Flash:
+
+- бюджет: до 2$ в неделю без учёта cache hit;
+- этого достаточно, чтобы опробовать в деле AI-Driven разработку в Opencode.
+
+Правила использования:
+
+1. Прокси-сервер предназначен только для использования на нашем курсе AI-Driven Development
+2. Используйте его только из OpenCode или иного современного ИИ-агента — это обеспечит хороший cache hit и сбережёт бюджет токенов для других студентов
+3. Нельзя использовать ключ в целях, нарушающих закон — это как минимум приведёт к бану на нашем курсе
+
+Инструкция:
+
+1. Перейдите на https://llm.atdd.ru/keys/
+2. Авторизуйтесь через Github
+3. Следуйте инструкции и используйте ключ, указанный на этой странице
+
+Ключ выдаётся только аккаунтам, зарегистрированным в ASAP. Если вы не смогли получить ключ — обратитесь к преподавателям.
+
+## Ссылки
+
+1. [Homebrew on Linux](https://docs.brew.sh/Homebrew-on-Linux)
+2. [Installation](https://docs.brew.sh/Installation)
