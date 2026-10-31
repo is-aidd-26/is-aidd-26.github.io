@@ -93,9 +93,9 @@ Gherkin (рус. «Корнишон») — это язык описания те
 
 ```mermaid
 flowchart TB
-    Gherkin{{"Тесты на Gherkin"}}
+    Gherkin(["Тесты на Gherkin"])
     Interpreter["Фреймворк Cucumber"]
-    Steps{{"Описания шагов"}}
+    Steps(["Описания шагов"])
     SUT["Тестируемая система"]
     Gherkin --> Interpreter
     Interpreter --> Steps
@@ -112,8 +112,8 @@ flowchart TB
 flowchart
     subgraph "Запуск"
         direction TB
-        GeneratedTest2{{"C# файл .feature.cs"}}
-        Steps{{"Описания шагов на C#"}}
+        GeneratedTest2(["C# файл .feature.cs"])
+        Steps(["Описания шагов на C#"])
         SUT["Тестируемая система"]
         GeneratedTest2 --> Steps
         Steps --> SUT
@@ -121,9 +121,9 @@ flowchart
 
     subgraph "Сборка"
         direction TB
-        Gherkin{{"Gherkin файл .feature"}}
+        Gherkin(["Gherkin файл .feature"])
         CodeGenerator["Генератор кода в Reqnroll"]
-        GeneratedTest{{"C# файл .feature.cs"}}
+        GeneratedTest(["C# файл .feature.cs"])
         Gherkin --> CodeGenerator
         CodeGenerator --> GeneratedTest
     end
