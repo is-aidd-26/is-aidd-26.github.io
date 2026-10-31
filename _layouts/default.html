@@ -6,11 +6,24 @@
   <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
   <meta name="description" content="{{ page.description | default: site.description }}">
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
 </head>
 <body>
   {% include header.html %}
   <main class="container">
-    {{ content }}
+    {% if page.toc %}
+      {% assign body_parts = content | split: '</h1>' %}
+      {% if body_parts.size == 2 %}
+        {{ body_parts.first }}</h1>
+        {% include toc.html html=content %}
+        {{ body_parts.last }}
+      {% else %}
+        {% include toc.html html=content %}
+        {{ content }}
+      {% endif %}
+    {% else %}
+      {{ content }}
+    {% endif %}
   </main>
   {% include footer.html %}
   {% include mathjax.html %}

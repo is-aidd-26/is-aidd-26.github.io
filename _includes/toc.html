@@ -1,0 +1,53 @@
+{% comment %}
+  Содержание страницы по заголовкам h2/h3 (ссылки на анкеры kramdown auto_ids).
+  Использование: {% include toc.html html=content %}
+  Блок выводится, только если заголовков не меньше двух.
+{% endcomment %}
+{%- assign nodes = include.html | split: '<h' -%}
+{%- assign opened_li = false -%}
+{%- assign opened_sub = false -%}
+{%- assign count = 0 -%}
+{%- capture list -%}
+  {%- for node in nodes -%}
+    {%- comment -%}Первый элемент сплита и теги вроде <hr /> отсеиваем по уровню{%- endcomment -%}
+    {%- assign level = node | slice: 0 | plus: 0 -%}
+    {%- if level < 2 or level > 3 -%}{%- continue -%}{%- endif -%}
+    {%- assign rest = node | split: '</h' | first -%}
+    {%- assign head = rest | split: '>' | first -%}
+    {%- unless head contains 'id="' -%}{%- continue -%}{%- endunless -%}
+    {%- assign id = head | split: 'id="' | last | split: '"' | first -%}
+    {%- capture prefix %}{{ head }}>{% endcapture -%}
+    {%- assign title = rest | remove_first: prefix | strip_html | strip -%}
+    {%- if id == '' or title == '' -%}{%- continue -%}{%- endif -%}
+    {%- if level == 2 -%}
+      {%- if opened_sub -%}</ul>{%- assign opened_sub = false -%}{%- endif -%}
+      {%- if opened_li -%}</li>{%- endif -%}
+      <li><a href="#{{ id }}">{{ title }}</a>
+      {%- assign opened_li = true -%}
+    {%- else -%}
+      {%- unless opened_sub -%}<ul class="toc-sublist">{%- assign opened_sub = true -%}{%- endunless -%}
+      <li><a href="#{{ id }}">{{ title }}</a></li>
+    {%- endif -%}
+    {%- assign count = count | plus: 1 -%}
+  {%- endfor -%}
+  {%- if opened_sub -%}</ul>{%- endif -%}
+  {%- if opened_li -%}</li>{%- endif -%}
+{%- endcapture -%}
+{%- assign list = list | strip -%}
+{%- if count >= 2 -%}
+<nav class="toc" aria-label="Содержание">
+  <details open>
+    <summary>Содержание</summary>
+    <ul class="toc-list">
+      {{ list }}
+    </ul>
+  </details>
+  <script>
+    (function () {
+      if (window.matchMedia('(max-width: 640px)').matches) {
+        document.querySelectorAll('nav.toc details').forEach(function (d) { d.open = false; });
+      }
+    })();
+  </script>
+</nav>
+{%- endif -%}

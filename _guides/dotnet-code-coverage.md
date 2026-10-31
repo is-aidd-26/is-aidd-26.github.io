@@ -73,7 +73,7 @@ dotnet tool install --global dotnet-reportgenerator-globaltool
 
 Добавьте в файл `.gitignore` в корне проекта игнорирование результатов сбора покрытия кода тестами:
 
-```
+```gitignore
 # Данные о покрытии кода тестами
 tests/coverage/
 tests/coverage-report/

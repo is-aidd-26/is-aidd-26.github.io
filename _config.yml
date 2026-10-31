@@ -28,11 +28,13 @@ defaults:
       type: labs
     values:
       layout: default
+      toc: true
   - scope:
       path: ""
       type: guides
     values:
       layout: default
+      toc: true
   - scope:
       path: ""
     values:

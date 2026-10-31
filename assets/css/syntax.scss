@@ -1,0 +1,81 @@
+---
+---
+
+/* Подсветка кода: тема github для Rouge (сгенерирована `bundle exec rougify style github`).
+   Фон и рамки блоков кода задаёт style.scss (pre / .highlight). */
+
+.highlight .w {
+  color: #24292f;
+}
+
+.highlight .k, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .kv {
+  color: #cf222e;
+}
+
+.highlight .gd {
+  color: #82071e;
+  background-color: #ffebe9;
+}
+
+.highlight .nb, .highlight .nc, .highlight .no, .highlight .nn {
+  color: #953800;
+}
+
+.highlight .sr, .highlight .na, .highlight .nt, .highlight .gi {
+  color: #116329;
+}
+
+.highlight .gi {
+  background-color: #dafbe1;
+}
+
+.highlight .ges {
+  font-weight: bold;
+  font-style: italic;
+}
+
+.highlight .kc, .highlight .l, .highlight .ld, .highlight .m, .highlight .mb,
+.highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo,
+.highlight .mx, .highlight .sb, .highlight .bp, .highlight .ne, .highlight .nl,
+.highlight .py, .highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi,
+.highlight .vm, .highlight .o, .highlight .ow {
+  color: #0550ae;
+}
+
+.highlight .gh, .highlight .gu {
+  color: #0550ae;
+  font-weight: bold;
+}
+
+.highlight .s, .highlight .sa, .highlight .sc, .highlight .dl, .highlight .sd,
+.highlight .s2, .highlight .se, .highlight .sh, .highlight .sx, .highlight .s1,
+.highlight .ss {
+  color: #0a3069;
+}
+
+.highlight .nd, .highlight .nf, .highlight .fm {
+  color: #8250df;
+}
+
+.highlight .err {
+  color: #f6f8fa;
+  background-color: #82071e;
+}
+
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cp,
+.highlight .cpf, .highlight .c1, .highlight .cs, .highlight .gl, .highlight .gt {
+  color: #6e7781;
+}
+
+.highlight .ni, .highlight .si, .highlight .ge {
+  color: #24292f;
+}
+
+.highlight .ge {
+  font-style: italic;
+}
+
+.highlight .gs {
+  color: #24292f;
+  font-weight: bold;
+}

@@ -324,6 +324,60 @@ mjx-container {
   max-width: 100%;
 }
 
+/* Содержание (TOC) */
+
+.toc {
+  margin: 0 0 2rem;
+}
+
+.toc details {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+}
+
+.toc summary {
+  cursor: pointer;
+  padding: 0.6rem 1.1rem;
+  font-weight: 700;
+  user-select: none;
+}
+
+.toc summary::marker {
+  color: var(--muted);
+}
+
+.toc ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.35rem 1.1rem 0.9rem;
+}
+
+.toc li {
+  margin-bottom: 0.2rem;
+}
+
+.toc .toc-sublist {
+  padding-left: 1rem;
+  margin: 0.25rem 0 0.3rem;
+  border-left: 2px solid var(--border);
+}
+
+.toc a {
+  color: var(--fg);
+  font-size: 0.95rem;
+}
+
+.toc a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.toc .toc-sublist a {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
 /* Адаптивность */
 
 @media (max-width: 640px) {
