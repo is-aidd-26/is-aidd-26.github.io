@@ -105,7 +105,7 @@ summary: "Автоматизация качества и TDD"
 1. Должны использовать XUnit для запуска
 2. Должны использовать библиотеку TestContainers для запуска СУБД
 
-Для измерения покрытия кода тестами следует использовать библиотеку Coverlet: [Анализ покрытия тестами кода для C#/.NET](https://compilers-course.ru/docs/articles/dotnet-code-coverage/).
+Для измерения покрытия кода тестами следует использовать библиотеку Coverlet: [Анализ покрытия тестами кода для C#/.NET](/guides/dotnet-code-coverage/).
 
 ## Особые требования для Python
 
@@ -154,6 +154,8 @@ All reusable library code is developed strictly by Canon TDD:
 
 1. [Интеграционные тесты для ASP.NET Core](https://habr.com/ru/articles/860932/)
 2. [Test Doubles в интеграционных тестах на ASP.NET Core](https://habr.com/ru/articles/871614/)
-3. [Анализ покрытия тестами кода для C#/.NET](https://compilers-course.ru/docs/articles/dotnet-code-coverage/)
-4. [Canon TDD](https://newsletter.kentbeck.com/p/canon-tdd)
-5. [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide)
+3. [Каноничный TDD и список тестов](/guides/canon-tdd/)
+4. [Анализ покрытия тестами кода для C#/.NET](/guides/dotnet-code-coverage/)
+5. [Gherkin для приёмочных тестов](/guides/gherkin/)
+6. [Canon TDD](https://newsletter.kentbeck.com/p/canon-tdd)
+7. [wemake-python-styleguide](https://github.com/wemake-services/wemake-python-styleguide)

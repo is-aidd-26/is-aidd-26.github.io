@@ -1,0 +1,14 @@
+<script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+<script>
+  mermaid.initialize({ startOnLoad: false });
+
+  // Рендерит блоки ```mermaid из markdown: <pre><code class="language-mermaid">
+  document.querySelectorAll('pre code.language-mermaid').forEach(function (code) {
+    var div = document.createElement('div');
+    div.className = 'mermaid';
+    div.textContent = code.textContent;
+    code.parentElement.replaceWith(div);
+  });
+
+  mermaid.run();
+</script>
