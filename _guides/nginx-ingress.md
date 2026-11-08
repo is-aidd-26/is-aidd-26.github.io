@@ -267,11 +267,15 @@ sequenceDiagram
     participant A as backend
 
     B->>N: GET /api/messages
-    Note over N,A: nginx добавляет заголовки<br/>Host, X-Real-IP, X-Forwarded-For, X-Forwarded-Proto
     N->>A: GET /api/messages
     A-->>N: 200 OK (JSON)
     N-->>B: 200 OK (JSON)
 ```
+
+Стоит отметить, что nginx для проксируемых запросов добавляет заголовки:
+
+1. Host, чтобы бэкенд воспринимал запрос как предназначенный для него;
+2. X-Real-IP, X-Forwarded-For, X-Forwarded-Proto, чтобы бэкенд мог правильно определить настоящего клиента и, например, отдать верные URL ссылок.
 
 Конфигурация проброшена в контейнер монтированием, поэтому после правок достаточно перечитать её командой `nginx -s reload` — перезапускать контейнер не нужно:
 
