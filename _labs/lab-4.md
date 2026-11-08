@@ -102,7 +102,7 @@ summary: "Автоматизация качества и TDD"
 
 В файле `Directory.Build.props` в корне проекта должны быть следующие опции:
 
-1. Режим «предупреждения трактуются как ошибки» — `<WarningsAsErrors>true</WarningsAsErrors>`
+1. Режим «предупреждения трактуются как ошибки» — `<TreatWarningsAsErrors>true</TreatWarningsAsErrors>`
 2. Подключены линтеры `Microsoft.CodeAnalysis.NetAnalyzers`, `Roslynator.Analyzers`, `StyleCop.Analyzers`, `xunit.analyzers`
 
 Интеграционные тесты:
